@@ -1,0 +1,19 @@
+/* Hämta nedladdade typsnitt */
+@font-face {
+	font-family: "matchaChi";
+	src: url(/assets/Matcha\ Cih.ttf);
+}
+
+/* Variabler */
+:root {
+	/* Färger */
+	--color-primary: #292361;
+	--color-accent: #a41623;
+	--color-bg-primary: #f6f3ff;
+	--color-bg-secondary: #e0edff;
+
+	/* Typsnitt */
+	--font-primary: "DM Sans", sans-serif;
+	--font-accent: "Lilita One", sans-serif;
+    --font-brand: "matchaChi", sans-serif;
+}
