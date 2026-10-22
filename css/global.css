@@ -105,7 +105,7 @@ h1 {
 		7.9px 6.1px 0.02px #fff;
 }
 
-h2 {
+h2, h3, h4, h5, h6 {
 	font-family: var(--font-accent);
 }
 
@@ -114,12 +114,12 @@ h2 {
 /* Knappar som länkar till annan sida */
 .button-link {
 	display: inline-block; /* Hindrar knappen från att brytas av vid brist på utrymme */
-	padding: 1rem 1.3rem;
+	padding: 0.9rem 1.1rem;
 	border-radius: 12px;
 	background-color: var(--color-accent);
 	color: white;
 	font-family: var(--font-accent);
-	font-size: 1.1rem;
+	font-size: 1rem;
 	font-weight: 600;
 	text-decoration: none;
 	transition: background-color 0.2s;
@@ -131,7 +131,7 @@ h2 {
 
 /* Pil på knapp */
 .button-link svg {
-	font-size: 0.9rem; /* Mindre font-size än texten */
+	font-size: 0.8rem; /* Mindre font-size än texten */
 	transition: transform 0.1s;
 }
 

@@ -66,3 +66,19 @@
 	/* Flyttar pilen till höger när muspekaren är över knappen*/
 	transform: translateX(0.4rem);
 }
+
+/* ------------------ Om oss ------------------ */
+
+/* Hela sektionen */
+.about {
+	padding: 1.5rem var(--spacing-edge) 2rem;
+	background-color: var(--color-bg-secondary);
+}
+
+.about h2 {
+	margin-top: 0;
+}
+
+.about h3 {
+	margin: 1.5rem 0; /* Mer luft mellan texten och knapparna */
+}
