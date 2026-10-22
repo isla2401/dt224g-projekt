@@ -17,3 +17,52 @@
 
 	gap: 1rem; /* Mellanrum mellan h1 och knapp */
 }
+
+/* ------------------ Upptäck Laxåland ------------------ */
+
+/* Hela sektionen */
+.explore {
+	padding: 1rem var(--spacing-edge);
+}
+
+/* Containern för alla puffar */
+.card-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-top: 2rem;
+}
+
+.card {
+	position: relative; /* Gör att knappen kan positioneras absolute */
+}
+
+.card-button {
+	background-color: white;
+	color: var(--color-primary);
+	font-family: var(--font-accent);
+	font-size: 1.2rem;
+	font-weight: bold;
+
+	padding: 0 1.3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	/* Positionerar knapp oavnpå bild */
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+	right: 1rem;
+}
+
+/* Pil på knapp */
+.card-button svg {
+	font-size: 1.1rem;
+	transition: transform 0.1s;
+}
+
+.card-button:hover svg {
+	/* Flyttar pilen till höger när muspekaren är över knappen*/
+	transform: translateX(0.4rem);
+}

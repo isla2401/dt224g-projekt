@@ -14,7 +14,7 @@
 
 	/* Typsnitt */
 	--font-primary: "DM Sans", sans-serif;
-	--font-accent: "Lilita One", sans-serif;
+	--font-accent: "Fredoka", sans-serif;
 	--font-brand: "matchaChi", sans-serif;
 
 	/* Spacing */
@@ -105,23 +105,27 @@ h1 {
 		7.9px 6.1px 0.02px #fff;
 }
 
+h2 {
+	font-family: var(--font-accent);
+}
+
 /* ------------------ Knappar ------------------ */
 
 /* Knappar som länkar till annan sida */
 .button-link {
 	display: inline-block; /* Hindrar knappen från att brytas av vid brist på utrymme */
-	padding: 1.1rem 1.3rem;
+	padding: 1rem 1.3rem;
 	border-radius: 12px;
 	background-color: var(--color-accent);
 	color: white;
 	font-family: var(--font-accent);
 	font-size: 1.1rem;
+	font-weight: 600;
 	text-decoration: none;
-	letter-spacing: 0.05rem; /* Mer utrymme mellan bokstäver för bättre läsbarhet */
 	transition: background-color 0.2s;
 }
 
-.button-link:hover{
+.button-link:hover {
 	background-color: #94121d; /* Lite mörkare än --color-accent */
 }
 
@@ -131,8 +135,9 @@ h1 {
 	transition: transform 0.1s;
 }
 
-.button-link:hover svg{
-	transform: translateX(0.3rem); /* Flyttar pilen till höger när muspekaren är över knappen*/
+.button-link:hover svg {
+	/* Flyttar pilen till höger när muspekaren är över knappen*/
+	transform: translateX(0.3rem);
 }
 
 /* =========================== HEADER ===========================*/
