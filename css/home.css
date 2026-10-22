@@ -1,0 +1,19 @@
+/* Startsidan */
+
+/* ------------------ Hero ------------------ */
+.hero {
+	background-image: url("../images/home/hero.webp");
+	background-color: #7ca9fd; /* Visas om inte bilden fungerar */
+	background-size: cover;
+	background-position: center;
+	padding: 2rem var(--spacing-edge);
+	min-height: 400px; /* Hindrar hero från att bli för platt när skärmen blir bredare */
+
+	/* Centrerar innehåll*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	gap: 1rem; /* Mellanrum mellan h1 och knapp */
+}

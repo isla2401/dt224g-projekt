@@ -1,4 +1,4 @@
-/* Hämta nedladdade typsnitt */
+/* Hämtar nedladdade typsnitt */
 @font-face {
 	font-family: "matchaChi";
 	src: url(/assets/Matcha\ Cih.ttf);
@@ -18,10 +18,10 @@
 	--font-brand: "matchaChi", sans-serif;
 
 	/* Spacing */
-	--spacing-edge-mobile: 7vw; /* Utrymme mellan sidans kant och närmsta element */
+	--spacing-edge: 7vw; /* Utrymme mellan sidans kant och närmsta element */
 }
 
-/* =========================== Global ===========================*/
+/* =========================== GLOBAL ===========================*/
 
 * {
 	box-sizing: border-box;
@@ -31,24 +31,116 @@ body {
 	background-color: var(--color-bg-primary);
 	color: var(--color-primary);
 	font-family: var(--font-primary);
+	text-align: center;
 
-	/* Ta bort standard spacing*/
+	/* Tar bort standard spacing*/
 	padding: 0;
 	margin: 0;
 }
 
 img {
-	/* Hindra bilder från att ta upp mer än det tillgängliga utrymmet */
+	/* Hindrar bilder från att ta upp mer än det tillgängliga utrymmet */
 	max-width: 100%;
 }
 
-/* =========================== Header ===========================*/
+/* ------------------ Rubriker ------------------ */
+
+h1 {
+	color: var(--color-primary);
+	font-family: var(--font-brand);
+	font-size: 2.2rem;
+	line-height: 1.6; /* Mer utrymme mellan textrader */
+
+	/* 	Skapar tjock vit kant runt bokstäverna. 
+		Detta är det enda sättet jag hittar som ger resultatet jag vill ha.  
+		Hämtat från https://stackoverflow.com/a/55097644 men jag har bytt ut färgen */
+	text-shadow:
+		0px 10px 0.02px #fff,
+		9.8px 2.1px 0.02px #fff,
+		4.2px -9.1px 0.02px #fff,
+		-8px -6px 0.02px #fff,
+		-7.6px 6.5px 0.02px #fff,
+		4.8px 8.8px 0.02px #fff,
+		9.6px -2.8px 0.02px #fff,
+		-0.7px -10px 0.02px #fff,
+		-9.9px -1.5px 0.02px #fff,
+		-3.5px 9.4px 0.02px #fff,
+		8.4px 5.4px 0.02px #fff,
+		7.1px -7px 0.02px #fff,
+		-5.4px -8.4px 0.02px #fff,
+		-9.4px 3.5px 0.02px #fff,
+		1.4px 9.9px 0.02px #fff,
+		10px 0.8px 0.02px #fff,
+		2.9px -9.6px 0.02px #fff,
+		-8.7px -4.8px 0.02px #fff,
+		-6.6px 7.5px 0.02px #fff,
+		5.9px 8px 0.02px #fff,
+		9.1px -4.1px 0.02px #fff,
+		-2.1px -9.8px 0.02px #fff,
+		-10px -0.1px 0.02px #fff,
+		-2.2px 9.8px 0.02px #fff,
+		9.1px 4.2px 0.02px #fff,
+		6.1px -8px 0.02px #fff,
+		-6.5px -7.6px 0.02px #fff,
+		-8.8px 4.7px 0.02px #fff,
+		2.7px 9.6px 0.02px #fff,
+		10px -0.6px 0.02px #fff,
+		1.5px -9.9px 0.02px #fff,
+		-9.3px -3.6px 0.02px #fff,
+		-5.5px 8.4px 0.02px #fff,
+		7px 7.2px 0.02px #fff,
+		8.5px -5.3px 0.02px #fff,
+		-3.4px -9.4px 0.02px #fff,
+		-9.9px 1.3px 0.02px #fff,
+		-0.8px 10px 0.02px #fff,
+		9.6px 2.9px 0.02px #fff,
+		4.9px -8.7px 0.02px #fff,
+		-7.5px -6.7px 0.02px #fff,
+		-8.1px 5.9px 0.02px #fff,
+		4px 9.2px 0.02px #fff,
+		9.8px -2px 0.02px #fff,
+		0.2px -10px 0.02px #fff,
+		-9.7px -2.3px 0.02px #fff,
+		-4.3px 9px 0.02px #fff,
+		7.9px 6.1px 0.02px #fff;
+}
+
+/* ------------------ Knappar ------------------ */
+
+/* Knappar som länkar till annan sida */
+.button-link {
+	display: inline-block; /* Hindrar knappen från att brytas av vid brist på utrymme */
+	padding: 1.1rem 1.3rem;
+	border-radius: 12px;
+	background-color: var(--color-accent);
+	color: white;
+	font-family: var(--font-accent);
+	font-size: 1.1rem;
+	text-decoration: none;
+	letter-spacing: 0.05rem; /* Mer utrymme mellan bokstäver för bättre läsbarhet */
+	transition: background-color 0.2s;
+}
+
+.button-link:hover{
+	background-color: #94121d; /* Lite mörkare än --color-accent */
+}
+
+/* Pil på knapp */
+.button-link svg {
+	font-size: 0.9rem; /* Mindre font-size än texten */
+	transition: transform 0.1s;
+}
+
+.button-link:hover svg{
+	transform: translateX(0.3rem); /* Flyttar pilen till höger när muspekaren är över knappen*/
+}
+
+/* =========================== HEADER ===========================*/
 
 header {
 	background-color: var(--color-primary);
 	color: white;
-	width: 100vw;
-	padding: 15px var(--spacing-edge-mobile);
+	padding: 1rem var(--spacing-edge);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -60,6 +152,6 @@ header .logo {
 
 /* Ikoner i header */
 header svg {
-	font-size: 1.8rem;
-	margin-left: 10px;
+	font-size: 1.6rem;
+	margin-left: 0.8rem;
 }
