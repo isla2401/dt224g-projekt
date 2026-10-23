@@ -10,7 +10,7 @@
 	--color-primary: #292361;
 	--color-accent: #a41623;
 	--color-bg-primary: #f9f7ff;
-	--color-bg-secondary: #e0edff;
+	--color-bg-secondary: #dae9ff;
 
 	/* Typsnitt */
 	--font-primary: "DM Sans", sans-serif;
@@ -105,7 +105,8 @@ h1 {
 		7.9px 6.1px 0.02px #fff;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3 {
 	font-family: var(--font-accent);
 }
 
@@ -159,4 +160,103 @@ header .logo {
 header svg {
 	font-size: 1.6rem;
 	margin-left: 0.8rem;
+}
+
+/* =========================== FOOTER ===========================*/
+
+footer {
+	padding: 2rem var(--spacing-edge);
+	background-color: var(--color-primary);
+	color: white;
+}
+
+footer .logo {
+	width: 12rem;
+	margin: 0.5rem 0;
+}
+
+/* Alla sektioner ("meny", "kontakta oss", "följ oss") */
+footer section {
+	padding: 0.5rem 0;
+}
+
+footer h2 {
+	font-size: 1.1rem; /* Mindre text */
+}
+
+/* Listor under "meny" och "kontakta oss" */
+footer ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+footer li {
+	font-size: 1.1rem; /* Större text */
+	margin: 0.6rem 0;
+}
+
+footer a {
+	color: white;
+	text-decoration: none;
+	font-weight: 300;
+}
+
+/* Container som grupperar texten och ikonen i länkarna */
+footer .text-icon-container {
+	/* Centrerar texten och ikonerna vertikalt och horisontellt */
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+
+	width: fit-content; /* Gör länken endast lika stor som text + ikon */
+	gap: 0.2rem;
+}
+
+/* Horisontell linje */
+footer hr {
+	margin: 1.5rem 0;
+}
+
+/* ------------------ "Meny" ------------------ */
+
+/* Pil-ikon */
+footer svg.fa-arrow-right {
+	font-size: 0.7rem;
+	transition: transform 0.1s;
+}
+
+footer a:hover svg.fa-arrow-right {
+	/* Flyttar pilen till höger när muspekaren är över länken */
+	transform: translateX(0.3rem);
+}
+
+/* ------------------ "Kontakta oss" ------------------ */
+
+footer address {
+	font-style: normal; /* Tar bort kursiv stil */
+}
+
+footer address a:hover {
+	/* Stryker under texten när muspekaren är över länken */
+	text-decoration: underline;
+}
+
+/* ------------------ "Följ oss" ------------------ */
+
+/* Container för sociala medier ikonerna */
+footer .social-links {
+	display: flex;
+	justify-content: center;
+	gap: 0.2rem;
+}
+
+/* Sociala medier ikoner */
+footer .social-links svg {
+	font-size: 2rem;
+	transition: transform 0.1s;
+}
+
+footer .social-links svg:hover {
+	/* Förstorar ikonen när muspekaren är över den */
+	transform: scale(1.1);
 }

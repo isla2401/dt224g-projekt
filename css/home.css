@@ -18,7 +18,7 @@
 	gap: 1rem; /* Mellanrum mellan h1 och knapp */
 }
 
-/* ------------------ Upptäck Laxåland ------------------ */
+/* ------------------ "Upptäck Laxåland" ------------------ */
 
 /* Hela sektionen */
 .explore {
@@ -67,7 +67,7 @@
 	transform: translateX(0.4rem);
 }
 
-/* ------------------ Om oss ------------------ */
+/* ------------------ "Om oss" ------------------ */
 
 /* Hela sektionen */
 .about {
