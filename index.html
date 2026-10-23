@@ -20,6 +20,10 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/home.css">
+
+    <!-- JavaScript -->
+    <script src="js/main.js" defer></script>
+
 </head>
 
 <body>
@@ -28,12 +32,12 @@
         <a href="index.html"><img class="logo" src="images/logo/logo.svg" alt="Laxåland startsida"></a>
 
         <!-- Navigation -->
-        <nav id="menu" class="open">
+        <nav id="menu">
             <ul>
                 <li>
                     <div class="text-icon-container">
                         <a href="#">Parken</a>
-                        <i class="fa-solid fa-chevron-down show-sub-menu" aria-label="Öppna undermeny"></i>
+                        <button class="show-sub-menu" aria-label="Öppna undermeny"><i class="fa-solid fa-chevron-down"></i></button>
                     </div>
                     <ul class="sub-menu">
                         <li><a href="#">Attraktioner</a></li>
@@ -44,7 +48,7 @@
                 <li>
                     <div class="text-icon-container">
                         <a href="#">Inför besöket</a>
-                        <i class="fa-solid fa-chevron-down show-sub-menu" aria-label="Öppna undermeny"></i>
+                        <button class="show-sub-menu" aria-label="Öppna undermeny"><i class="fa-solid fa-chevron-down"></i></button>
                     </div>
                     <ul class="sub-menu">
                         <li><a href="#">Öppettider</a></li>
@@ -58,8 +62,10 @@
 
         <!-- Ikoner -->
         <div class="header-icons">
-            <i class="fa-solid fa-cart-shopping" aria-label="Öppna varukorg"></i>
-            <i id="show-menu" class="fa-solid fa-bars" aria-label="Öppna meny"></i>
+            <button aria-label="Öppna varukorg"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button id="show-menu" aria-label="Öppna meny">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </header>
 
