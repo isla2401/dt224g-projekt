@@ -242,7 +242,7 @@ header button{
 
 /* Ikon för att visa undermeny */
 #menu .show-sub-menu {
-	transition: transform 0.3s;
+	transition: transform 0.4s;
 	cursor: pointer;
 }
 
