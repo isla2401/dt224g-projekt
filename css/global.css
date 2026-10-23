@@ -1,7 +1,7 @@
 /* Hämtar nedladdade typsnitt */
 @font-face {
 	font-family: "matchaChi";
-	src: url(/assets/Matcha\ Cih.ttf);
+	src: url("../assets/Matcha\ Cih.ttf");
 }
 
 /* Variabler */
