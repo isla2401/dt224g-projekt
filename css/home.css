@@ -8,6 +8,7 @@
 	background-position: center;
 	padding: 2rem var(--spacing-edge);
 	min-height: 400px; /* Hindrar hero från att bli för platt när skärmen blir bredare */
+	margin-top: var(--height-header); /* Höjden på header så att hero inte hamnar bakom */
 
 	/* Centrerar innehåll*/
 	display: flex;

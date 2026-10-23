@@ -19,6 +19,9 @@
 
 	/* Spacing */
 	--spacing-edge: 7vw; /* Utrymme mellan sidans kant och närmsta element */
+
+	/* Mått */
+	--height-header: 70px; /* Höjden på header */
 }
 
 /* =========================== GLOBAL ===========================*/
@@ -150,16 +153,98 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	width: 100%;
+	height: var(--height-header);
+	position: fixed; /* Gör att menyn inte försvinner när man skrollar */
+	top: 0;
+	left: 0;
+	z-index: 5000; /* Placera ovanpå allt annat */
 }
 
 header .logo {
 	width: 10rem;
 }
 
-/* Ikoner i header */
-header svg {
+/* Ikoner */
+.header-icons svg {
 	font-size: 1.6rem;
 	margin-left: 0.8rem;
+	cursor: pointer;
+}
+
+/* ------------------ Navigation/Mobilmeny ------------------ */
+
+/* nav i header */
+#menu {
+	background-color: var(--color-primary);
+	color: white;
+	font-size: 1.5rem;
+	text-align: left;
+	margin-top: var(--height-header);
+
+	/* Täck hela skärmen */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	z-index: -1000; /* Placera under resten av headern, så att logga och ikoner syns*/
+	overflow-y: auto; /* Gör meny skrollbar om den inte får plats */
+	display: none; /* Dölj meny som standard */
+}
+
+#menu.open {
+	/* Visar menyn när klassen "open" läggs till*/
+	display: block;
+}
+
+#menu ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0 var(--spacing-edge);
+}
+
+#menu li {
+	margin: 2rem 0;
+}
+
+#menu a {
+	color: white;
+	text-decoration: none;
+}
+
+/* Container för text och ikon */
+#menu .text-icon-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* Undermenyer */
+#menu .sub-menu {
+	display: none;
+	font-size: 1.2rem;
+	margin: 0 2rem;
+}
+
+#menu .sub-menu.open {
+	/* Visar undermeny när klassen "open" läggs till*/
+	display: block;
+}
+
+#menu .sub-menu li {
+	margin: 1.5rem 0;
+}
+
+/* Ikon för att visa undermeny */
+#menu .show-sub-menu {
+	transition: transform 0.4s;
+	cursor: pointer;
+}
+
+#menu .show-sub-menu.active {
+	/* Rotera ikonen när undermenyn öppnas */
+	transform: rotate(-180deg);
 }
 
 /* =========================== FOOTER ===========================*/

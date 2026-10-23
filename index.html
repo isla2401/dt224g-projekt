@@ -28,21 +28,25 @@
         <a href="index.html"><img class="logo" src="images/logo/logo.svg" alt="Laxåland startsida"></a>
 
         <!-- Navigation -->
-        <nav>
+        <nav id="menu" class="open">
             <ul>
                 <li>
-                    <a href="#">Parken</a>
-                    <i class="fa-solid fa-chevron-down"></i>
-                    <ul>
+                    <div class="text-icon-container">
+                        <a href="#">Parken</a>
+                        <i class="fa-solid fa-chevron-down show-sub-menu" aria-label="Öppna undermeny"></i>
+                    </div>
+                    <ul class="sub-menu">
                         <li><a href="#">Attraktioner</a></li>
                         <li><a href="#">Mat & dryck</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Biljetter</a></li>
                 <li>
-                    <a href="#">Inför besöket</a>
-                    <i class="fa-solid fa-chevron-down"></i>
-                    <ul>
+                    <div class="text-icon-container">
+                        <a href="#">Inför besöket</a>
+                        <i class="fa-solid fa-chevron-down show-sub-menu" aria-label="Öppna undermeny"></i>
+                    </div>
+                    <ul class="sub-menu">
                         <li><a href="#">Öppettider</a></li>
                         <li><a href="#">Hitta hit</a></li>
                         <li><a href="#">Frågor & svar</a></li>
@@ -53,9 +57,9 @@
         </nav>
 
         <!-- Ikoner -->
-        <div>
+        <div class="header-icons">
             <i class="fa-solid fa-cart-shopping" aria-label="Öppna varukorg"></i>
-            <i class="fa-solid fa-bars" aria-label="Öppna meny"></i>
+            <i id="show-menu" class="fa-solid fa-bars" aria-label="Öppna meny"></i>
         </div>
     </header>
 
