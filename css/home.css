@@ -2,7 +2,7 @@
 
 /* ------------------ Hero ------------------ */
 .hero {
-	background-image: url("../images/home/hero.webp");
+	background-image: url("../images/hero.webp");
 	background-color: #7ca9fd; /* Visas om inte bilden fungerar */
 	background-size: cover;
 	background-position: center;
