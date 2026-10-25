@@ -269,6 +269,8 @@ footer {
 	padding: 2rem var(--spacing-edge);
 	background-color: var(--color-primary);
 	color: white;
+	display: flex;
+	flex-direction: column;
 }
 
 footer .logo {
@@ -348,13 +350,14 @@ footer address a:hover {
 footer .social-links {
 	display: flex;
 	justify-content: center;
-	gap: 0.2rem;
+	gap: 0.7rem;
 }
 
 /* Sociala medier ikoner */
 footer .social-links svg {
 	font-size: 2rem;
 	transition: transform 0.1s;
+	width: fit-content;
 }
 
 footer .social-links svg:hover {
@@ -364,8 +367,8 @@ footer .social-links svg:hover {
 
 /* =========================== MEDIA QUERIES ===========================*/
 
-/* Stora skärmar > 850px */
-@media (min-width: 850px) {
+/* Stora skärmar > 900px */
+@media (min-width: 900px) {
 	/* ------------------ Header ------------------ */
 
 	/* Menyknapp */
@@ -445,6 +448,27 @@ footer .social-links svg:hover {
 	#menu .show-sub-menu {
 		font-size: 0.9rem; /* Lite mindre än texten */
 		margin-left: 0.4rem;
+	}
+
+	/* ------------------ Footer ------------------ */
+
+	footer {
+		text-align: left;
+	}
+
+	footer h2 {
+		margin-top: 0; /* Gör att loggan och rubrikerna hamnar lika högt upp */
+	}
+
+	/* Huvudinnehållet i footern */
+	.footer-main {
+		display: flex; /* Visa på rad istället för kolumn */
+		justify-content: space-between;
+	}
+
+	/* Container som grupperar texten och ikonen i länkarna */
+	footer .text-icon-container {
+		margin: 0; /* Ta bort margin som centrerade texten */
 	}
 }
 
