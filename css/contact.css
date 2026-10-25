@@ -1,0 +1,25 @@
+/* Kontaktsidan */
+
+/* ------------------ Hero ------------------ */
+.hero {
+	background-image: url("../images/hero-subpage.webp");
+	background-color: #7ca9fd; /* Visas om inte bilden fungerar */
+	background-size: cover;
+	background-position: top;
+	padding: 2rem var(--spacing-edge);
+	min-height: 10rem;
+	margin-top: var(--height-header); /* Höjden på header så att hero inte hamnar bakom */
+
+	/* Centrerar innehåll*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Stora skärmar > 750 px */
+@media (min-width: 900px) {
+	.hero {
+		height: 14rem; /* Lite större */
+	}
+}
