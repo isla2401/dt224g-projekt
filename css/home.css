@@ -98,7 +98,7 @@
 
 /* =========================== MEDIA QUERIES ===========================*/
 
-/* Stora skärmar > 750 px */
+/* Stora skärmar > 900 px */
 @media (min-width: 900px) {
 	.hero {
 		height: 30rem; /* Lite större */
