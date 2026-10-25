@@ -17,7 +17,7 @@
 	align-items: center;
 }
 
-/* ------------------ Kontaktuppgifter ------------------ */
+/* ------------------ Kontakt ------------------ */
 
 /* Hela kontaktsektionen */
 .contact {
@@ -33,7 +33,7 @@
 }
 
 .contact-info li {
-	margin: 0.3rem 0;
+	margin: 0.5rem 0;
 }
 
 .contact-info a {
@@ -45,7 +45,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	max-width: 30rem;
+	max-width: 25rem;
 	margin: 0 auto;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .contact-form input {
-	margin-bottom: 0.8rem; /* Luft mellan inputfälten */
+	margin-bottom: 0.6rem; /* Luft mellan inputfälten */
 }
 
 .contact-form textarea {
@@ -82,5 +82,23 @@
 @media (min-width: 900px) {
 	.hero {
 		height: 14rem; /* Lite större */
+	}
+
+	/* Hela kontaktsektionen */
+	.contact {
+		text-align: left;
+		flex-direction: row; /* Placerar kontaktuppgifter och kontaktformulär bredvid varandra */
+		justify-content: center;
+		gap: 5rem;
+	}
+
+	/* Kontaktformuläret */
+	.contact-form form {
+		width: 25rem;
+	}
+
+	/* "Skicka"-knapp */
+	.contact-form button {
+		margin: 1rem 0 0; /* Placera längst till vänster */
 	}
 }
