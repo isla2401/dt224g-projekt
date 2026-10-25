@@ -39,7 +39,7 @@
 .card {
 	position: relative; /* Gör att knappen kan positioneras absolute */
 	flex: 1; /* Gör att alla puffar tar upp lika mycket plats */
-	height: 15rem;
+	height: 20vw;
 }
 
 .card img {
@@ -97,10 +97,11 @@
 
 /* =========================== MEDIA QUERIES ===========================*/
 
+/* Stora skärmar > 750 px */
 @media (min-width: 750px) {
 	/* Container för puffar */
 	.cards-container {
-		margin: 2.5rem 0; /* Mer luft */
+		margin: 2rem 0; /* Mer luft */
 		flex-direction: row; /* Placera puffar på en rad */
 	}
 
@@ -108,5 +109,17 @@
 	.explore > p,
 	.about > p {
 		padding: 0 calc(2 * var(--spacing-edge)); /* Gör texten mer kompakt */
+	}
+
+	/* "Om oss"-sektionen */
+	.about {
+		padding: 2rem var(--spacing-edge);
+	}
+}
+
+/* Mycket stora skärmar > 1200px */
+@media (min-width: 1200px) {
+	.card {
+		height: 15vw; /* Mindre höjd */
 	}
 }
