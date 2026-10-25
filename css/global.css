@@ -21,7 +21,7 @@
 	--spacing-edge: 7vw; /* Utrymme mellan sidans kant och närmsta element */
 
 	/* Mått */
-	--height-header: 70px; /* Höjden på header */
+	--height-header: 4rem; /* Höjden på header */
 }
 
 /* =========================== GLOBAL ===========================*/
@@ -359,4 +359,15 @@ footer .social-links svg {
 footer .social-links svg:hover {
 	/* Förstorar ikonen när muspekaren är över den */
 	transform: scale(1.1);
+}
+
+/* =========================== MEDIA QUERIES ===========================*/
+
+@media (min-width: 750px) {
+	/* ------------------ Global ------------------ */
+
+	:root {
+		--spacing-edge: 8vw; /* Utrymme mellan sidans kant och närmsta element */
+		--height-header: 3.5rem; /* Höjden på header */
+	}
 }
