@@ -52,7 +52,7 @@ img {
 h1 {
 	color: var(--color-primary);
 	font-family: var(--font-brand);
-	font-size: 2.2rem;
+	font-size: 2.5rem;
 	line-height: 1.6; /* Mer utrymme mellan textrader */
 
 	/* 	Skapar tjock vit kant runt bokstäverna. 
@@ -369,6 +369,13 @@ footer .social-links svg:hover {
 
 /* Stora skärmar > 900px */
 @media (min-width: 900px) {
+	/* ------------------ Global ------------------ */
+
+	h1 {
+		font-size: 2.8rem; /* Lite större */
+		line-height: 1.4; /* Mindre utrymme mellan textrader än på små skärmar */
+	}
+
 	/* ------------------ Header ------------------ */
 
 	/* Menyknapp */
@@ -476,5 +483,12 @@ footer .social-links svg:hover {
 @media (min-width: 1200px) {
 	:root {
 		--spacing-edge: 10vw; /* Mer utrymme mellan sidans kant och närmsta element */
+	}
+}
+
+/* Enorma skärmar > 1400px */
+@media (min-width: 1400px) {
+	:root {
+		--spacing-edge: 14vw; /* Mer utrymme mellan sidans kant och närmsta element */
 	}
 }

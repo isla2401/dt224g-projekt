@@ -7,7 +7,7 @@
 	background-size: cover;
 	background-position: center;
 	padding: 2rem var(--spacing-edge);
-	min-height: 400px; /* Hindrar hero från att bli för platt när skärmen blir bredare */
+	min-height: 25rem; /* Hindrar hero från att bli för platt när skärmen blir bredare */
 	margin-top: var(--height-header); /* Höjden på header så att hero inte hamnar bakom */
 
 	/* Centrerar innehåll*/
@@ -40,6 +40,7 @@
 	position: relative; /* Gör att knappen kan positioneras absolute */
 	flex: 1; /* Gör att alla puffar tar upp lika mycket plats */
 	height: 20vw;
+	max-width: 25rem; /* Hindra puffar från att bli för breda */
 }
 
 .card img {
@@ -98,27 +99,36 @@
 /* =========================== MEDIA QUERIES ===========================*/
 
 /* Stora skärmar > 750 px */
-@media (min-width: 750px) {
+@media (min-width: 900px) {
+	.hero {
+		height: 30rem; /* Lite större */
+	}
+
 	/* Container för puffar */
 	.cards-container {
 		margin: 2rem 0; /* Mer luft */
 		flex-direction: row; /* Placera puffar på en rad */
 	}
 
+	.card {
+		max-width: none; /* Låt puffar bli hur breda som helst */
+	}
+
 	/* Brödtexten i "Upptäck Laxlåland" och "Om oss" */
 	.explore > p,
 	.about > p {
-		padding: 0 calc(2 * var(--spacing-edge)); /* Gör texten mer kompakt */
+		padding: 0 var(--spacing-edge); /* Gör texten mer kompakt */
 	}
 
 	/* "Om oss"-sektionen */
 	.about {
-		padding: 2rem var(--spacing-edge);
+		padding: 2rem var(--spacing-edge); /* Mer luft */
 	}
 }
 
 /* Mycket stora skärmar > 1200px */
 @media (min-width: 1200px) {
+	/* Puffar */
 	.card {
 		height: 15vw; /* Mindre höjd */
 	}
