@@ -8,6 +8,7 @@
 :root {
 	/* Färger */
 	--color-primary: #292361;
+	--color-primary-lighter: #322a79;
 	--color-accent: #a41623;
 	--color-bg-primary: #f9f7ff;
 	--color-bg-secondary: #dae9ff;
@@ -21,7 +22,7 @@
 	--spacing-edge: 7vw; /* Utrymme mellan sidans kant och närmsta element */
 
 	/* Mått */
-	--height-header: 4rem; /* Höjden på header */
+	--height-header: 4.5rem; /* Höjden på header */
 }
 
 /* =========================== GLOBAL ===========================*/
@@ -149,7 +150,7 @@ h3 {
 header {
 	background-color: var(--color-primary);
 	color: white;
-	padding: 1rem var(--spacing-edge);
+	padding: 0 var(--spacing-edge);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -190,7 +191,7 @@ header .logo {
 	color: white;
 	font-size: 1.5rem;
 	text-align: left;
-	margin-top: var(--height-header);
+	padding-top: var(--height-header);
 
 	/* Täck hela skärmen */
 	position: fixed;
@@ -199,7 +200,7 @@ header .logo {
 	width: 100%;
 	height: 100%;
 
-	z-index: -1000; /* Placera under resten av headern, så att logga och ikoner syns*/
+	z-index: -1000; /* Placera bakom resten av headern, så att logga och ikoner syns*/
 	overflow-y: auto; /* Gör meny skrollbar om den inte får plats */
 	display: none; /* Dölj meny som standard */
 }
@@ -215,8 +216,8 @@ header .logo {
 	margin: 0 var(--spacing-edge);
 }
 
-#menu li {
-	margin: 2rem 0;
+#menu > ul > li {
+	margin: 1.5rem 0 2rem 0;
 }
 
 #menu a {
@@ -233,7 +234,7 @@ header .logo {
 /* Undermenyer */
 #menu .sub-menu {
 	display: none;
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	margin: 0 2rem;
 }
 
@@ -253,7 +254,7 @@ header .logo {
 	border: 0;
 	padding: 0;
 	background-color: transparent;
-	transition: transform 0.4s;
+	transition: transform 0.3s;
 	cursor: pointer;
 }
 
@@ -363,11 +364,93 @@ footer .social-links svg:hover {
 
 /* =========================== MEDIA QUERIES ===========================*/
 
-@media (min-width: 750px) {
-	/* ------------------ Global ------------------ */
+/* Stora skärmar > 850px */
+@media (min-width: 850px) {
+	/* ------------------ Header ------------------ */
 
+	/* Menyknapp */
+	.header-icons button {
+		display: none;
+	}
+
+	/* Varukorg-knapp */
+	.header-icons a {
+		font-size: 1.2rem; /* Gör mindre */
+	}
+
+	#menu {
+		/* Nollställer utseende från mobilmenyn */
+		display: block;
+		position: static;
+		width: fit-content;
+		height: fit-content;
+		overflow-y: visible;
+		padding: 0;
+
+		font-size: 1.2rem; /* Mindre text */
+		margin: 0 2rem 0 auto; /* Separerar logga, meny och varukorg */
+	}
+
+	#menu ul {
+		margin: 0;
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	/* List-items i huvudmenyn */
+	#menu > ul > li {
+		position: relative;
+		margin: 0;
+		padding: 0 0.7rem 0 1.2rem; /* Gör att min-width på undermenyn ska vara lite större än text+pil i huvudmenyn*/
+	}
+
+	/* Hover-effekt för läkar i huvudmenyn */
+	#menu a:hover:not(.sub-menu a) {
+		text-decoration: underline;
+	}
+
+	/* Undermenyer */
+	#menu .sub-menu {
+		background-color: var(--color-primary);
+		font-size: 1.15rem; /* Lite mindre än huvudmenyn */
+		margin: 0; /* Tar bort margin som fanns i mobilmenyn */
+
+		min-width: 100%; /* Minst lika bred som dess rubrik i huvudmenyn */
+		width: max-content; /* Få plats med text + padding */
+
+		/* Positionerar undermenyn under headern */
+		position: absolute;
+		left: 0;
+		top: 50%; /* Placera i mitten av texten i huvudmenyn */
+		margin-top: calc(var(--height-header) / 2); /* Margin ovanför lika stor som halva headern */
+	}
+
+	/* List-items i undermeny */
+	#menu .sub-menu li {
+		margin: 0; /* Tar bort margin som fanns i mobilmenyn */
+	}
+
+	/* länkar i undermeny */
+	#menu .sub-menu a {
+		display: block; /* Ta upp hela utrymmet i <li> */
+		padding: 1rem 1.2rem;
+	}
+
+	/* Hover-effekt för läkar i undermenyn */
+	#menu .sub-menu a:hover {
+		background-color: var(--color-primary-lighter);
+	}
+
+	/* Ikon för att visa undermeny */
+	#menu .show-sub-menu {
+		font-size: 0.9rem; /* Lite mindre än texten */
+		margin-left: 0.4rem;
+	}
+}
+
+/* Mycket stora skärmar > 1200px */
+@media (min-width: 1200px) {
 	:root {
-		--spacing-edge: 8vw; /* Utrymme mellan sidans kant och närmsta element */
-		--height-header: 3.5rem; /* Höjden på header */
+		--spacing-edge: 10vw; /* Mer utrymme mellan sidans kant och närmsta element */
 	}
 }
