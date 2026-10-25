@@ -17,7 +17,68 @@
 	align-items: center;
 }
 
-/* Stora skärmar > 750 px */
+/* ------------------ Kontaktuppgifter ------------------ */
+
+/* Hela kontaktsektionen */
+.contact {
+	padding: 1rem var(--spacing-edge) 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-info ul {
+	/* Nollställ listutseende */
+	list-style-type: none;
+	padding: 0;
+}
+
+.contact-info li {
+	margin: 0.3rem 0;
+}
+
+.contact-info a {
+	color: var(--color-primary);
+}
+
+/* Kontaktformulär */
+.contact-form form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 30rem;
+	margin: 0 auto;
+}
+
+.contact-form label {
+	margin-bottom: 0.3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+	width: 100%;
+	padding: 0.5rem;
+	font-family: var(--font-primary);
+	border: 1px solid #2923617e; /* Färgen är en halvt genomskinlig version av --color-primary */
+	border-radius: 2px;
+}
+
+.contact-form input {
+	margin-bottom: 0.8rem; /* Luft mellan inputfälten */
+}
+
+.contact-form textarea {
+	resize: vertical; /* Gör att textfältet endast går att göra större vertikalt */
+	min-height: 4rem;
+}
+
+/* "Skicka"-knapp (har också klassen button-red som stylas i global.css) */
+.contact-form button {
+	margin: 1rem auto 0; /* Centrera horisontellt */
+}
+
+/* =========================== MEDIA QUERIES ===========================*/
+
+/* Stora skärmar > 900 px */
 @media (min-width: 900px) {
 	.hero {
 		height: 14rem; /* Lite större */

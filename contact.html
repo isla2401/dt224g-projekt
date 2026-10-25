@@ -80,34 +80,38 @@
         <section class="hero">
             <h1>Kontakt</h1>
         </section>
-
-        <!-- Kontaktuppgifter och kontaktformulär -->
-        <section>
-            <h2>Kontaktuppgifter</h2>
-            <ul>
-                <li>
-                    <strong>Adress: </strong>
-                    <a href="https://maps.app.goo.gl/xEEoCWwGW1FbhSxf8" target="_blank" rel="noopener noreferrer">
-                        Vattugatan 5, 695 20 Laxå
-                    </a>
-                </li>
-                <li><strong>Telefon: </strong><a href="tel:0701234567">070 123 45 67</a></li>
-                <li><strong>E-post: </strong><a href="mailto:info@laxaland.se">info@laxaland.se</a></li>
-            </ul>
-
-            <p>Du kan också skicka ett meddelande direkt till oss via formuläret nedan.</p>
+        <div class="contact">
+            <!-- Kontaktuppgifter -->
+            <section class="contact-info">
+                <h2>Kontaktuppgifter</h2>
+                <ul>
+                    <li>
+                        <strong>Adress: </strong>
+                        <a href="https://maps.app.goo.gl/xEEoCWwGW1FbhSxf8" target="_blank" rel="noopener noreferrer">
+                            Vattugatan 5, 695 20 Laxå
+                        </a>
+                    </li>
+                    <li><strong>Telefon: </strong><a href="tel:0701234567">070 123 45 67</a></li>
+                    <li><strong>E-post: </strong><a href="mailto:info@laxaland.se">info@laxaland.se</a></li>
+                </ul>
+            </section>
 
             <!-- Kontaktformulär -->
-            <form id="contact-form">
-                <label for="name">Fullständigt namn</label><br>
-                <input type="text" name="name" id="name"><br>
-                <label for="email">E-postadress</label><br>
-                <input type="email" name="email" id="email"><br>
-                <label for="message">Meddelande</label><br>
-                <textarea name="message" id="message"></textarea><br>
-                <button type="submit" id="submit-button">Skicka</button>
-            </form>
-        </section>
+            <section class="contact-form">
+                <h2>Kontaktformulär</h2>
+                <p>Skicka ett meddelande direkt till oss.</p>
+
+                <form id="contact-form">
+                    <label for="name">Fullständigt namn</label>
+                    <input type="text" name="name" id="name" placeholder="Förnamn Efternamn">
+                    <label for="email">E-postadress</label>
+                    <input type="email" name="email" id="email" placeholder="exempel@exempel.com">
+                    <label for="message">Meddelande</label>
+                    <textarea name="message" id="message" placeholder="Skriv ditt meddelande här"></textarea>
+                    <button type="submit" id="submit-button" class="button-red">Skicka</button>
+                </form>
+            </section>
+        </div>
 
     </main>
 

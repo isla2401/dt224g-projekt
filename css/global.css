@@ -116,13 +116,27 @@ h3 {
 
 /* ------------------ Knappar ------------------ */
 
+/* Alla röda knappar, inklusive länk-knappar */
+.button-red, .button-link {
+	background-color: var(--color-accent);
+	color: white;
+	font-family: var(--font-accent);
+	transition: background-color 0.2s;
+}
+
+/* Röda knappar som inte länkar till annan sida */
+.button-red{
+	border: none;
+	padding: 0.6rem 1.8rem;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
 /* Knappar som länkar till annan sida */
 .button-link {
 	display: inline-block; /* Hindrar knappen från att brytas av vid brist på utrymme */
 	padding: 0.9rem 1.1rem;
 	border-radius: 12px;
-	background-color: var(--color-accent);
-	color: white;
 	font-family: var(--font-accent);
 	font-size: 1rem;
 	font-weight: 600;
@@ -130,8 +144,8 @@ h3 {
 	transition: background-color 0.2s;
 }
 
-.button-link:hover {
-	background-color: #94121d; /* Lite mörkare än --color-accent */
+.button-link:hover, .button-red:hover {
+	background-color: #860f19; /* Lite mörkare än --color-accent */
 }
 
 /* Pil på knapp */
@@ -144,7 +158,6 @@ h3 {
 	/* Flyttar pilen till höger när muspekaren är över knappen*/
 	transform: translateX(0.3rem);
 }
-
 /* =========================== HEADER ===========================*/
 
 header {
