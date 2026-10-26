@@ -56,8 +56,9 @@ function displayAttractions(data) {
 		const titleEl = document.createElement("h3");
 		const heightRequirementEl = document.createElement("p");
 
-		// Lägg till bildlänk
+		// Lägg till bildlänk och alt-text
 		imageEl.src = attraction.image;
+        imageEl.alt = attraction.alt;
 
 		// Skapa rubriktext
 		titleEl.textContent = attraction.name;
