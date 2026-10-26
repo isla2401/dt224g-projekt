@@ -1,0 +1,40 @@
+{
+	"restaurants": [
+		{
+			"name": "Taco Hej",
+			"description": "Mexikansk mat",
+			"image": "../images/restaurants/mexican.webp",
+			"alt": "Mexikanska tacos med limeklyftor och en flaska Jarritos läsk."
+		},
+		{
+			"name": "Papa's Pizzeria",
+			"description": "Vedugnsbakad pizza",
+			"image": "../images/restaurants/pizza.webp",
+			"alt": "En pizza med kött och grönsaker upplagd på en brun träskärbräda."
+		},
+		{
+			"name": "Borgir",
+			"description": "Hamburgare",
+			"image": "../images/restaurants/burger.webp",
+			"alt": "En hamburgare serverad med dippsås och pomfritt."
+		},
+		{
+			"name": "Benoits conrner",
+			"description": "Mat från det franska köket",
+			"image": "../images/restaurants/boeuf.webp",
+			"alt": "En mustig köttgryta serverad i en vit skål."
+		},
+		{
+			"name": "Kenneths Kennel & Kebab",
+			"description": "Kebab och grillat",
+			"image": "../images/restaurants/kebab.webp",
+			"alt": "Kebabspätt på en bädd av pomfritt, tomat och rödlök."
+		},
+		{
+			"name": "Glassriket",
+			"description": "Glass i stora lass!",
+			"image": "../images/restaurants/ice-cream.webp",
+			"alt": "Tråg med gräddglass i olika färger."
+		}
+	]
+}
