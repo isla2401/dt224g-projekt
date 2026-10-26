@@ -163,6 +163,7 @@ h3 {
 	transform: translateX(0.3rem);
 }
 
+/* Navigeringsknappar för sidinnehåll */
 .subpage-nav-button {
 	background-color: var(--color-primary-lighter);
 	padding: 0.8rem 1.1rem;
