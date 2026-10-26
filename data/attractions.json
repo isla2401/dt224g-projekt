@@ -1,0 +1,49 @@
+{
+	"attractions": [
+		{
+			"name": "Laxen",
+			"heightRequirement": 140,
+			"image": ""
+		},
+		{
+			"name": "High Drama",
+			"heightRequirement": 130,
+			"image": ""
+		},
+		{
+			"name": "Radiobildarna",
+			"heightRequirement": 110,
+			"image": ""
+		},
+		{
+			"name": "Hemsökta huset",
+			"heightRequirement": null,
+			"image": ""
+		},
+		{
+			"name": "Kättingflygaren",
+			"heightRequirement": 120,
+			"image": ""
+		},
+		{
+			"name": "Draken",
+			"heightRequirement": 100,
+			"image": ""
+		},
+		{
+			"name": "Sven & Rut",
+			"heightRequirement": null,
+			"image": ""
+		},
+		{
+			"name": "Rymdraketerna",
+			"heightRequirement": 100,
+			"image": ""
+		},
+		{
+			"name": "Cirkuskarusellen",
+			"heightRequirement": null,
+			"image": ""
+		}
+	]
+}
