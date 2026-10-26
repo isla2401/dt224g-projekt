@@ -109,6 +109,14 @@ h1 {
 		7.9px 6.1px 0.02px #fff;
 }
 
+h2{
+	font-size: 1.8rem;
+}
+
+h3{
+	font-size: 1.3rem;
+}
+
 h2,
 h3 {
 	font-family: var(--font-accent);

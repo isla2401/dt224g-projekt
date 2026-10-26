@@ -21,9 +21,9 @@
 
 main nav {
 	padding: 1.5rem var(--spacing-edge) 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
 }
 
 /* ------------------ "Attraktioner" + "Mat & Dryck" ------------------ */
@@ -39,6 +39,8 @@ main nav {
 #restaurants {
 	display: grid;
 	grid-template-columns: 1fr; /* Endast 1 kolumn */
+	gap: 1rem;
+    margin: 2rem 0 3rem;
 }
 
 /* Container för attraktion/restaurang */
@@ -48,7 +50,6 @@ article {
 	height: 25vw;
 	min-height: 6rem;
 	background-color: var(--color-bg-secondary);
-	margin-bottom: 1rem;
 	gap: 1.5rem;
 	text-align: left;
 }
@@ -73,9 +74,53 @@ article h3 {
 
 /* =========================== MEDIA QUERIES ===========================*/
 
+/* Medelstora skärmar > 600 px */
+@media (min-width: 600px) {
+	/* Grid-containers för attraktioner och restauranger */
+	#attractions,
+	#restaurants {
+		grid-template-columns: 1fr 1fr; /* Två kolumner */
+	}
+
+	/* Container för attraktion/restaurang */
+	article {
+		/* Placera bild ovanför text */
+		flex-direction: column;
+		align-items: flex-start;
+		height: 20rem;
+		gap: 0;
+	}
+
+	/* Container för bild */
+	article .image-container {
+		width: 100%;
+		height: 60%;
+	}
+
+	article .text-container {
+		margin: 1rem 1.5rem;
+	}
+}
+
 /* Stora skärmar > 900 px */
 @media (min-width: 900px) {
 	.hero {
 		height: 14rem; /* Lite större */
+	}
+
+	/* Grid-containers för attraktioner och restauranger */
+	#attractions,
+	#restaurants {
+		grid-template-columns: 1fr 1fr 1fr; /* Tre kolumner */
+	}
+
+	/* Container för attraktion/restaurang */
+	article {
+		height: 25rem; /* Mer höjd */
+	}
+
+	/* Container för bild */
+	article .image-container {
+		height: 70%; /* Större bild */
 	}
 }
