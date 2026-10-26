@@ -58,7 +58,7 @@ function displayAttractions(data) {
 
 		// Lägg till bildlänk och alt-text
 		imageEl.src = attraction.image;
-        imageEl.alt = attraction.alt;
+		imageEl.alt = attraction.alt;
 
 		// Skapa rubriktext
 		titleEl.textContent = attraction.name;
@@ -69,6 +69,10 @@ function displayAttractions(data) {
 		} else {
 			heightRequirementEl.textContent = `Längdkrav: ${attraction.heightRequirement} cm`;
 		}
+
+		// Lägg till klasser för styling av containers
+		imageContainerEl.classList.add("image-container");
+		textContainerEl.classList.add("text-container");
 
 		// Lägg in bild och texter i sina containers
 		imageContainerEl.appendChild(imageEl);
