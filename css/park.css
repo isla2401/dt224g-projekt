@@ -58,6 +58,7 @@ article {
 article .image-container {
 	width: 30%;
 	height: 100%;
+	flex-shrink: 0; /* Hindra bild från att krympa när utrymmet blir litet */
 }
 
 article img {
