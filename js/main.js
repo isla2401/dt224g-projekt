@@ -11,6 +11,7 @@ const menu = document.querySelector("#menu"); // Mobilmeny
 const menuBtn = document.querySelector("#show-menu"); // Knapp för att öppna/stänga mobilmeny
 const subMenus = document.querySelectorAll(".sub-menu"); // Undermenyer
 const subMenuBtns = document.querySelectorAll(".show-sub-menu"); // Knappar för att öppna/stänga undermenyer
+const menuLinks = document.querySelectorAll("#menu a"); // Länkar i menyn
 
 // =========================== EVENTLYSSNARE ===========================
 
@@ -21,6 +22,14 @@ menuBtn.addEventListener("click", toggleMenu);
 subMenuBtns.forEach((subMenuBtn, index) => {
 	subMenuBtn.addEventListener("click", () => {
 		toggleSubMenu(index); // Index används för att hitta rätt knapp och undermeny
+	});
+});
+
+/* Stäng menyn när en länk klickas på. (Sker inte automatiskt om man 
+   klickar på en länk som går till samma sida som man befinner sig på) */
+menuLinks.forEach((menuLink) => {
+	menuLink.addEventListener("click", () => {
+		closeMenus();
 	});
 });
 
@@ -68,4 +77,22 @@ function toggleSubMenu(subMenuIndex) {
 	} else {
 		subMenuBtn.ariaLabel = "Öppna undermeny";
 	}
+}
+
+// Stäng alla menyer
+function closeMenus() {
+	// Hämta meny-ikon
+	const menuIcon = menuBtn.querySelector(".svg-inline--fa");
+
+	// Stäng huvudmeny
+	menu.classList.remove("open");
+	menuIcon.setAttribute("data-icon", "bars");
+	menuBtn.ariaLabel = "Öppna meny";
+
+	// Stäng alla undermenyer
+	subMenus.forEach((subMenu, index) => {
+		subMenu.classList.remove("open");
+		subMenuBtns[index].classList.remove("active");
+		subMenuBtns[index].ariaLabel = "Öppna undermeny";
+	});
 }
