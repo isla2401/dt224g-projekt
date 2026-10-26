@@ -8,7 +8,7 @@
 :root {
 	/* Färger */
 	--color-primary: #292361;
-	--color-primary-lighter: #322a79;
+	--color-primary-lighter: #4035a8;
 	--color-accent: #a41623;
 	--color-bg-primary: #f9f7ff;
 	--color-bg-secondary: #dae9ff;
@@ -116,16 +116,20 @@ h3 {
 
 /* ------------------ Knappar ------------------ */
 
-/* Alla röda knappar, inklusive länk-knappar */
-.button-red, .button-link {
-	background-color: var(--color-accent);
+/* Alla knappar*/
+.button-red,
+.button-link,
+.subpage-nav-button {
 	color: white;
+	text-decoration: none;
 	font-family: var(--font-accent);
 	transition: background-color 0.2s;
+	display: inline-block; /* Hindrar knappen från att brytas av vid brist på utrymme */
 }
 
 /* Röda knappar som inte länkar till annan sida */
-.button-red{
+.button-red {
+	background-color: var(--color-accent);
 	border: none;
 	padding: 0.6rem 1.8rem;
 	border-radius: 4px;
@@ -134,17 +138,17 @@ h3 {
 
 /* Knappar som länkar till annan sida */
 .button-link {
+	background-color: var(--color-accent);
 	display: inline-block; /* Hindrar knappen från att brytas av vid brist på utrymme */
 	padding: 0.9rem 1.1rem;
 	border-radius: 12px;
 	font-family: var(--font-accent);
 	font-size: 1rem;
 	font-weight: 600;
-	text-decoration: none;
-	transition: background-color 0.2s;
 }
 
-.button-link:hover, .button-red:hover {
+.button-link:hover,
+.button-red:hover {
 	background-color: #860f19; /* Lite mörkare än --color-accent */
 }
 
@@ -158,6 +162,16 @@ h3 {
 	/* Flyttar pilen till höger när muspekaren är över knappen*/
 	transform: translateX(0.3rem);
 }
+
+.subpage-nav-button {
+	background-color: var(--color-primary-lighter);
+	padding: 0.8rem 1.1rem;
+	border-radius: 4px;
+}
+.subpage-nav-button:hover {
+	background-color: var(--color-primary);
+}
+
 /* =========================== HEADER ===========================*/
 
 header {

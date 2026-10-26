@@ -1,0 +1,81 @@
+/* Parksidan */
+
+/* ------------------ Hero ------------------ */
+.hero {
+	background-image: url("../images/hero-subpage.webp");
+	background-color: #7ca9fd; /* Visas om inte bilden fungerar */
+	background-size: cover;
+	background-position: top;
+	padding: 2rem var(--spacing-edge);
+	min-height: 10rem;
+	margin-top: var(--height-header); /* Höjden på header så att hero inte hamnar bakom */
+
+	/* Centrerar innehåll*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* ------------------ Sidnavigation ------------------ */
+
+main nav {
+	padding: 1.5rem var(--spacing-edge) 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* ------------------ "Attraktioner" + "Mat & Dryck" ------------------ */
+
+/* Sektioner med attraktioner och restauranger */
+.attractions-section,
+.restaurants-section {
+	padding: 0 var(--spacing-edge);
+}
+
+/* Grid-containers för attraktioner och restauranger */
+#attractions,
+#restaurants {
+	display: grid;
+	grid-template-columns: 1fr; /* Endast 1 kolumn */
+}
+
+/* Container för attraktion/restaurang */
+article {
+	display: flex;
+	align-items: center;
+	height: 25vw;
+	min-height: 6rem;
+	background-color: var(--color-bg-secondary);
+	margin-bottom: 1rem;
+	gap: 1.5rem;
+	text-align: left;
+}
+
+/* Container för bild */
+article .image-container {
+	width: 30%;
+	height: 100%;
+}
+
+article img {
+	/* Täck hela containern */
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+article h3 {
+	font-size: 1.3rem;
+	margin: 0.7rem 0;
+}
+
+/* =========================== MEDIA QUERIES ===========================*/
+
+/* Stora skärmar > 900 px */
+@media (min-width: 900px) {
+	.hero {
+		height: 14rem; /* Lite större */
+	}
+}
