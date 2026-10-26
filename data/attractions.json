@@ -3,47 +3,47 @@
 		{
 			"name": "Laxen",
 			"heightRequirement": 140,
-			"image": ""
+			"image": "../images/attractions/rollercoaster-red.webp"
 		},
 		{
 			"name": "High Drama",
 			"heightRequirement": 130,
-			"image": ""
+			"image": "../images/attractions/pendulum-ride.webp"
 		},
 		{
 			"name": "Radiobildarna",
 			"heightRequirement": 110,
-			"image": ""
+			"image": "../images/attractions/bumper-cars.webp"
 		},
 		{
 			"name": "Hemsökta huset",
 			"heightRequirement": null,
-			"image": ""
+			"image": "../images/attractions/haunted-house.webp"
 		},
 		{
 			"name": "Kättingflygaren",
 			"heightRequirement": 120,
-			"image": ""
+			"image": "../images/attractions/swing-ride.webp"
 		},
 		{
 			"name": "Draken",
 			"heightRequirement": 100,
-			"image": ""
+			"image": "../images/attractions/dragon-ride.webp"
 		},
 		{
 			"name": "Sven & Rut",
 			"heightRequirement": null,
-			"image": ""
+			"image": "../images/attractions/ferris-weel.webp"
 		},
 		{
 			"name": "Rymdraketerna",
 			"heightRequirement": 100,
-			"image": ""
+			"image": "../images/attractions/space-ships.webp"
 		},
 		{
 			"name": "Cirkuskarusellen",
 			"heightRequirement": null,
-			"image": ""
+			"image": "../images/attractions/carousel.webp"
 		}
 	]
 }
