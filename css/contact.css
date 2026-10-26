@@ -50,7 +50,7 @@
 }
 
 .contact-form label {
-	margin-bottom: 0.3rem;
+	margin: 0.6rem 0 0.3rem 0;
 }
 
 .contact-form input,
@@ -62,10 +62,6 @@
 	border-radius: 2px;
 }
 
-.contact-form input {
-	margin-bottom: 0.6rem; /* Luft mellan inputfälten */
-}
-
 .contact-form textarea {
 	resize: vertical; /* Gör att textfältet endast går att göra större vertikalt */
 	min-height: 4rem;
@@ -74,6 +70,24 @@
 /* "Skicka"-knapp (har också klassen button-red som stylas i global.css) */
 .contact-form button {
 	margin: 1rem auto 0; /* Centrera horisontellt */
+}
+
+/* Felmeddelande */
+.contact-form .error-text {
+	color: red;
+	font-size: 0.9rem;
+}
+
+/* Inputfält med misslyckad validering */
+.contact-form .error {
+	border: 1px solid red;
+	border-radius: 2px;
+}
+
+/* Bekräftelsemeddelande */
+.contact-form #confirmation-text {
+	color: green;
+	font-size: 0.9rem;
 }
 
 /* =========================== MEDIA QUERIES ===========================*/

@@ -26,6 +26,7 @@
 
     <!-- JavaScript -->
     <script src="js/main.js" defer></script>
+    <script src="js/contact.js" defer></script>
 
 </head>
 
@@ -104,10 +105,14 @@
                 <form id="contact-form">
                     <label for="name">Fullständigt namn</label>
                     <input type="text" name="name" id="name" placeholder="Förnamn Efternamn">
+                    <span id="name-error" class="error-text"></span>
                     <label for="email">E-postadress</label>
                     <input type="email" name="email" id="email" placeholder="exempel@exempel.com">
+                    <span id="email-error" class="error-text"></span>                   
                     <label for="message">Meddelande</label>
                     <textarea name="message" id="message" placeholder="Skriv ditt meddelande här"></textarea>
+                    <span id="message-error" class="error-text"></span>
+                    <span id="confirmation-text"></span>                    
                     <button type="submit" id="submit-button" class="button-red">Skicka</button>
                 </form>
             </section>
