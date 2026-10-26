@@ -27,6 +27,16 @@
 
 /* =========================== GLOBAL ===========================*/
 
+html {
+	/* --- Följande används när man trycker på en länk för att komma till ett visst element på en sida --- */
+
+	/* Gör att sidan rullas ner istället för att hoppa */
+	scroll-behavior: smooth;
+
+	/* Gör att man hamnar strax ovanför sektionen man scrollar till och att headern inte är i vägen */
+	scroll-padding-top: calc(var(--height-header) + 6rem);
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -109,11 +119,11 @@ h1 {
 		7.9px 6.1px 0.02px #fff;
 }
 
-h2{
+h2 {
 	font-size: 1.8rem;
 }
 
-h3{
+h3 {
 	font-size: 1.3rem;
 }
 
