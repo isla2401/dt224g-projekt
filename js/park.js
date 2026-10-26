@@ -3,17 +3,20 @@
 /*
     Denna fil innehåller kod som:
     - Hämtar attraktioner från data/attractions.json
-    - Visar attraktionerna på sidan park.html
+    - Hämtar restauranger från data/restaurants.json
+    - Visar attraktionerna och restaurangerna på sidan park.html
 */
 
 // Hämta element från DOM
 const attractionsSection = document.querySelector("#attractions"); // Sektion för attraktioner
+const restaurantsSection = document.querySelector("#restaurants"); // Sektion för restauranger
 
 // =========================== EVENTLYSSNARE ===========================
 
 // När sidan laddats in
 document.addEventListener("DOMContentLoaded", () => {
 	getAttractions(); // Hämta och visa attraktioner
+	getRestaurants(); // Hämta och visa restauranger
 });
 
 // =========================== FUNKTIONER ===========================
@@ -85,5 +88,69 @@ function displayAttractions(data) {
 
 		// Lägg in article i attraktionssektionen så att den visas på sidan
 		attractionsSection.appendChild(articleEl);
+	});
+}
+
+// Hämtar restauranger från JSON-fil
+async function getRestaurants() {
+	try {
+		// Hämta data med fetch
+		const response = await fetch("../data/restaurants.json");
+
+		// Kontrollera att API-anropet lyckats
+		if (!response.ok) {
+			throw new Error("API-anropet misslyckades. Status: " + response.status);
+		}
+
+		// Omvandla JSON till JavaScript-objekt
+		const data = await response.json();
+
+		// Visa restaurangerna
+		displayRestaurants(data);
+	} catch (error) {
+		// Skriv ut felmeddelande till konsolen och på sidan
+		console.error("Något gick fel: " + error);
+		restaurantsSection.innerHTML = "<p>Kunde inte hämta restauranger. Försök igen senare.</p>";
+	}
+}
+
+// Visar restaurangerna på sidan
+function displayRestaurants(data) {
+	// Skapa array med restaurangerna
+	const restaurants = data.restaurants;
+
+	// Skapa element i DOM för varje restaurang
+	restaurants.forEach((restaurant) => {
+		// Skapa element
+		const articleEl = document.createElement("article");
+		const imageContainerEl = document.createElement("div"); // För styling
+		const textContainerEl = document.createElement("div"); // För styling
+		const imageEl = document.createElement("img");
+		const titleEl = document.createElement("h3");
+		const descriptionEl = document.createElement("p");
+
+		// Lägg till bildlänk och alt-text
+		imageEl.src = restaurant.image;
+		imageEl.alt = restaurant.alt;
+
+		// Lägg till texter
+		titleEl.textContent = restaurant.name;
+		descriptionEl.textContent = restaurant.description;
+
+		// Lägg till klasser för styling av containers
+		imageContainerEl.classList.add("image-container");
+		textContainerEl.classList.add("text-container");
+
+		// Lägg in bild och texter i sina containers
+		imageContainerEl.appendChild(imageEl);
+		textContainerEl.appendChild(titleEl);
+		textContainerEl.appendChild(descriptionEl);
+
+		// Lägg in containers i article
+		articleEl.appendChild(imageContainerEl);
+		articleEl.appendChild(textContainerEl);
+
+		// Lägg in article i restaurangssektionen så att den visas på sidan
+		restaurantsSection.appendChild(articleEl);
 	});
 }
