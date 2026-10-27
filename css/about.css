@@ -55,11 +55,17 @@ iframe {
 
 /* Varje fråga + svar */
 #faq li {
-	margin-bottom: 0.7rem;
 	box-shadow: 0 0 2px var(--color-primary); /* Mjuk kant */
 	background-color: white;
 	border-radius: 3px;
 	text-align: left;
+	max-width: 35rem;
+	margin: 0 auto 0.7rem;
+	transition: box-shadow 0.1s;
+}
+
+#faq li:hover {
+	box-shadow: 0 0 4px var(--color-primary); /* Tydligare skugga */
 }
 
 /* Knapp med fråga och pil-ikon */
@@ -71,7 +77,7 @@ iframe {
 	gap: 1rem;
 
 	font-family: var(--font-primary);
-	font-size: 1rem;
+	font-size: 1.05rem;
 	font-weight: bold;
 	text-align: left;
 
