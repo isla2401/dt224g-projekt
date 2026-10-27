@@ -21,7 +21,7 @@
 
 /* Hela kontaktsektionen */
 .contact {
-	padding: 1rem var(--spacing-edge) 2rem;
+	padding: 0.5rem var(--spacing-edge) 3rem;
 	display: flex;
 	flex-direction: column;
 }
@@ -38,7 +38,13 @@
 
 .contact-info a {
 	color: var(--color-primary);
+	text-decoration: none;
 }
+
+.contact-info a:hover {
+	text-decoration: underline;
+}
+
 
 /* Kontaktformulär */
 .contact-form form {

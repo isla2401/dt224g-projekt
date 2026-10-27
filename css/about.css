@@ -21,15 +21,14 @@
 
 /* Hela sektionen */
 #opening-hours {
-	padding: 0.5rem var(--spacing-edge) 1.5rem;
+	padding: 0.5rem var(--spacing-edge) 0;
 }
 
 /* ------------------ "Hitta hit" ------------------ */
 
 /* Hela sektionen */
 #find-us {
-	padding: 0.5rem var(--spacing-edge) 2em;
-	background-color: var(--color-bg-secondary);
+	padding: 0.5rem var(--spacing-edge) 1rem;
 }
 
 /* Inbäddad karta */
@@ -65,7 +64,7 @@ iframe {
 }
 
 #faq li:hover {
-	box-shadow: 0 0 4px var(--color-primary); /* Tydligare skugga */
+	box-shadow: 0 0 3.5px var(--color-primary); /* Tydligare skugga */
 }
 
 /* Knapp med fråga och pil-ikon */

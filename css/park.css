@@ -36,7 +36,7 @@ html {
 	display: grid;
 	grid-template-columns: 1fr; /* Endast 1 kolumn */
 	gap: 1rem;
-    margin: 2rem 0 3rem;
+	margin: 2rem 0 3rem;
 }
 
 /* Container för attraktion/restaurang */
@@ -48,6 +48,7 @@ article {
 	background-color: var(--color-bg-secondary);
 	gap: 1.5rem;
 	text-align: left;
+	box-shadow: 0 0 1px var(--color-primary); /* Mjuk kant */
 }
 
 /* Container för bild */
