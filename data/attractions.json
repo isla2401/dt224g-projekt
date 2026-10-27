@@ -3,55 +3,55 @@
 		{
 			"name": "Laxen",
 			"heightRequirement": 140,
-			"image": "../images/attractions/rollercoaster-red.webp",
+			"image": "images/attractions/rollercoaster-red.webp",
 			"alt": "En röd bergochdalbana med passagerare som åker vertikalt."
 		},
 		{
 			"name": "High Drama",
 			"heightRequirement": 130,
-			"image": "../images/attractions/pendulum-ride.webp",
+			"image": "images/attractions/pendulum-ride.webp",
 			"alt": "En pendelkarusell som svingat passagerare högt upp i luften mot en blå himmel."
 		},
 		{
 			"name": "Radiobildarna",
 			"heightRequirement": 110,
-			"image": "../images/attractions/bumper-cars.webp",
+			"image": "images/attractions/bumper-cars.webp",
 			"alt": "Radiobilar med lysande ljus som kör på en bana under tak."
 		},
 		{
 			"name": "Hemsökta huset",
 			"heightRequirement": null,
-			"image": "../images/attractions/haunted-house.webp",
+			"image": "images/attractions/haunted-house.webp",
 			"alt": "Ett spökhus upplyst i grönt och lila ljus på natten."
 		},
 		{
 			"name": "Kättingflygaren",
 			"heightRequirement": 120,
-			"image": "../images/attractions/swing-ride.webp",
+			"image": "images/attractions/swing-ride.webp",
 			"alt": "En slänggunga där passagerare svävar högt upp i luften i sina gungor."
 		},
 		{
 			"name": "Draken",
 			"heightRequirement": 100,
-			"image": "../images/attractions/dragon-ride.webp",
+			"image": "images/attractions/dragon-ride.webp",
 			"alt": "En grön bergochdalbana formad som en drake omringad av gröna träd."
 		},
 		{
 			"name": "Sven & Rut",
 			"heightRequirement": null,
-			"image": "../images/attractions/ferris-weel.webp",
+			"image": "images/attractions/ferris-weel.webp",
 			"alt": "Ett pariserhjul med färgglada gondoler mot en blå himmel."
 		},
 		{
 			"name": "Rymdraketerna",
 			"heightRequirement": 100,
-			"image": "../images/attractions/space-ships.webp",
+			"image": "images/attractions/space-ships.webp",
 			"alt": "En barnkarusell med rymdskepp i färgerna vitt, rött och blått"
 		},
 		{
 			"name": "Cirkuskarusellen",
 			"heightRequirement": null,
-			"image": "../images/attractions/carousel.webp",
+			"image": "images/attractions/carousel.webp",
 			"alt": "En pojke rider på en karusellhäst. Karusellen är guldig med gula lampor."
 		}
 	]
