@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function getAttractions() {
 	try {
 		// Hämta data med fetch
-		const response = await fetch("../data/attractions.json");
+		const response = await fetch("data/attractions.json");
 
 		// Kontrollera att API-anropet lyckats
 		if (!response.ok) {
@@ -95,7 +95,7 @@ function displayAttractions(data) {
 async function getRestaurants() {
 	try {
 		// Hämta data med fetch
-		const response = await fetch("../data/restaurants.json");
+		const response = await fetch("data/restaurants.json");
 
 		// Kontrollera att API-anropet lyckats
 		if (!response.ok) {
