@@ -1,0 +1,25 @@
+{
+	"tickets": [
+		{
+			"name": "Entrébiljett",
+			"description": "Entré till parken",
+			"price": 100,
+			"image": "images/tickets/ticket-entry.webp",
+			"alt": "En lila biljett med texten 'Entré Laxåland'"
+		},
+		{
+			"name": "Entré + Åkpass",
+			"description": "Entré till parken och fria åk i alla attraktioner",
+			"price": 350,
+			"image": "images/tickets/ticket-ride.webp",
+			"alt": "En lila biljett med texten 'Åkpass Laxåland'"
+		},
+		{
+			"name": "Årskort",
+			"description": "Entré till parken och fria åk i alla attraktioner under 12 månader",
+			"price": 2500,
+			"image": "images/tickets/ticket-year.webp",
+			"alt": "En lila biljett med texten 'Årskort Laxåland'"
+		}
+	]
+}
