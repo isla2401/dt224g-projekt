@@ -4,16 +4,23 @@
     Denna fil innehåller kod som:
     - Hämtar biljetter från data/tickets.json
     - Visar biljetterna på sidan tickets.html
+	- Hämtar sparad varukorg från localStorage
+	- Sparar biljetter till varukorgen i localStorage
+	- Animerar "köp nu"-knappen på sidan tickets.html
 */
 
 // Hämta element från DOM
 const ticketsContainer = document.querySelector("#tickets-container"); // Container för biljetter
+
+// Skapa globala variabler
+let shoppingCartItems = []; // Varukorgsinnehåll
 
 // =========================== EVENTLYSSNARE ===========================
 
 // När sidan laddats in
 document.addEventListener("DOMContentLoaded", () => {
 	getTickets(); // Hämta och visa biljetter
+	loadShoppingCart(); // Hämta sparad varukorg från localStorage
 });
 
 // =========================== FUNKTIONER ===========================
@@ -65,19 +72,20 @@ function displayTickets(data) {
 		descriptionEl.textContent = ticket.description;
 		priceEl.textContent = `Pris: ${ticket.price} kr`;
 
-        // Lägg till text på knapp
+		// Lägg till text på knapp
 		buyButton.textContent = "Köp nu";
+
+		// Lägg till eventlyssnare för klick på knapp
+		buyButton.addEventListener("click", () => {
+			saveToCart(ticket); // Spara biljett till varukorg
+			animateButton(buyButton); // Animera knapp
+		});
 
 		// Lägg till klasser för styling
 		priceEl.classList.add("price");
 		buyButton.classList.add("button-red");
 
-		/* Lägg in eventlistener på knapp som anropar funktion för att köpa biljett
-		buyButton.addEventListener("click", () => {
-			buyTicket();
-		});*/
-
-        // Lägg in bild, texter och knapp i ett article-element
+		// Lägg in bild, texter och knapp i ett article-element
 		articleEl.appendChild(imageEl);
 		articleEl.appendChild(titleEl);
 		articleEl.appendChild(descriptionEl);
@@ -87,4 +95,34 @@ function displayTickets(data) {
 		// Lägg in article i tickets-container så att den visas på sidan
 		ticketsContainer.appendChild(articleEl);
 	});
+}
+
+// Hämtar eventuell varukorgsinnehåll från localStorage
+function loadShoppingCart() {
+	// Kontrollera om varukorg finns sparad i local storage
+	if (localStorage.getItem("shoppingCart") !== null) {
+		// Fyll arrayen med det sparade varukorgsinnehållet
+		shoppingCartItems = JSON.parse(localStorage.getItem("shoppingCart"));
+	}
+}
+
+// Sparar biljett till varukorg i localStorage
+function saveToCart(ticket) {
+	// Lägg till biljetten i arrayen
+	shoppingCartItems.push(ticket);
+	// Spara arrayen i localStorage
+	localStorage.setItem("shoppingCart", JSON.stringify(shoppingCartItems)); 
+}
+
+// Byter färg och text på knappen
+function animateButton(button) {
+	// Gör knappen grön och ersätt texten med en bock
+	button.classList.add("active");
+	button.textContent = "✓";
+
+	// Återställ knappen efter 1 sekund
+	setTimeout(function () {
+		button.classList.remove("active");
+		button.textContent = "Köp nu";
+	}, 1000);
 }

@@ -51,6 +51,17 @@
 	font-weight: 500; /* Lite tjockare text */
 }
 
+#tickets-container button{
+	/* Ha kvar samma bredd och höjd även när texten byts ut */
+	width: 6.5rem; 
+	height: 2.4rem;
+}
+
+/* "Köp nu"-knapp som klickats på */
+#tickets-container button.active{
+	background-color: rgb(0, 145, 0);
+}
+
 /* =========================== MEDIA QUERIES ===========================*/
 
 /* Medelstora skärmar > 700 px */
