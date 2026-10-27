@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varukorg - Laxåland</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo/favicon.svg">
+
+    <!-- Hämta typsnitt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Hämta ikoner -->
+    <script src="https://kit.fontawesome.com/128d26eff7.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/cart.css">
+
+    <!-- JavaScript -->
+    <script src="js/main.js" defer></script>
+    <script src="js/cart.js" defer></script>
+</head>
+
+<body>
+    <!-- Sidhuvud med navigation -->
+    <header>
+        <a href="index.html"><img class="logo" src="images/logo/logo.svg" alt="Laxåland startsida"></a>
+
+        <!-- Navigation -->
+        <nav id="menu" aria-label="Huvudmeny">
+            <ul>
+                <li>
+                    <div class="text-icon-container">
+                        <a href="park.html">Parken</a>
+                        <button class="show-sub-menu" aria-label="Öppna undermeny"><i
+                                class="fa-solid fa-chevron-down"></i></button>
+                    </div>
+                    <ul class="sub-menu">
+                        <li><a href="park.html#attractions">Attraktioner</a></li>
+                        <li><a href="park.html#restaurants">Mat & dryck</a></li>
+                    </ul>
+                </li>
+                <li><a href="tickets.html">Biljetter</a></li>
+                <li>
+                    <div class="text-icon-container">
+                        <a href="about.html">Inför besöket</a>
+                        <button class="show-sub-menu" aria-label="Öppna undermeny"><i
+                                class="fa-solid fa-chevron-down"></i></button>
+                    </div>
+                    <ul class="sub-menu">
+                        <li><a href="about.html#opening-hours">Öppettider</a></li>
+                        <li><a href="about.html#find-us">Hitta hit</a></li>
+                        <li><a href="about.html#faq">Frågor & svar</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <!-- Ikoner -->
+        <div class="header-icons">
+            <a href="cart.html" aria-label="Öppna varukorg"><i class="fa-solid fa-cart-shopping"></i></a>
+            <button id="show-menu" aria-label="Öppna meny">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Huvudinnehåll -->
+    <main>
+        <section>
+            <h2>Varukorg</h2>
+            <div class="shopping-cart-container">
+                <!-- Innehåll läggs in med JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Sidfot -->
+    <footer>
+        <!-- Huvudinnehåll i footer -->
+        <div class="footer-main">
+            <a href="index.html"><img class="logo" src="images/logo/logo.svg" alt="Laxåland startsida"></a>
+
+            <!-- Navigering -->
+            <section>
+                <h2>MENY</h2>
+                <nav aria-label="Sidfotsmeny">
+                    <ul>
+                        <li>
+                            <a href="park.html" class="text-icon-container">Parken
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tickets.html" class="text-icon-container">Biljetter
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html" class="text-icon-container">Inför besöket
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="text-icon-container">Kontakt
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- Kontaktuppgifter -->
+            <section>
+                <h2>KONTAKTA OSS</h2>
+                <address>
+                    <ul>
+                        <li>
+                            <a href="https://maps.app.goo.gl/xEEoCWwGW1FbhSxf8" target="_blank"
+                                rel="noopener noreferrer" class="text-icon-container">
+                                <i class="fa-solid fa-location-dot" aria-label="Adress"></i>
+                                Vattugatan 5, 695 20 Laxå
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:0701234567" class="text-icon-container">
+                                <i class="fa-solid fa-phone" aria-label="Telefon"></i>
+                                070 123 45 67
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@laxaland.se" class="text-icon-container">
+                                <i class="fa-solid fa-envelope" aria-label="E-post"></i>
+                                info@laxaland.se
+                            </a>
+                        </li>
+                    </ul>
+                </address>
+            </section>
+
+            <!-- Sociala medier -->
+            <section>
+                <h2>FÖLJ OSS</h2>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://youtu.be/dQw4w9WgXcQ?si=oGT_d-P5av-PteIb" target="_blank" rel="noopener noreferrer"
+                        aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </section>
+        </div>
+
+        <hr>
+
+        <!-- Copyright -->
+        <small>© 2026 Laxåland</small>
+    </footer>
+</body>
+
+</html>
