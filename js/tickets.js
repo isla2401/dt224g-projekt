@@ -63,10 +63,14 @@ function displayTickets(data) {
 		// Lägg till texter
 		titleEl.textContent = ticket.name;
 		descriptionEl.textContent = ticket.description;
-		priceEl.textContent = `Pris ${ticket.price} kr`;
+		priceEl.textContent = `Pris: ${ticket.price} kr`;
 
         // Lägg till text på knapp
 		buyButton.textContent = "Köp nu";
+
+		// Lägg till klasser för styling
+		priceEl.classList.add("price");
+		buyButton.classList.add("button-red");
 
 		/* Lägg in eventlistener på knapp som anropar funktion för att köpa biljett
 		buyButton.addEventListener("click", () => {
