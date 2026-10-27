@@ -1,0 +1,15 @@
+.arrow-icon-container {
+	transition: transform 0.3s;
+}
+
+.arrow-icon-container.active {
+	transform: rotate(-180deg);
+}
+
+.answer-container {
+	display: none;
+}
+
+.answer-container.open {
+	display: block;
+}
