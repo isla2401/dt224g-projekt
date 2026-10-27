@@ -1,15 +1,118 @@
+/* "Inför besöket"-sidan */
+
+/* ------------------ Hero ------------------ */
+.hero {
+	background-image: url("../images/hero-subpage.webp");
+	background-color: #7ca9fd; /* Visas om inte bilden fungerar */
+	background-size: cover;
+	background-position: top;
+	padding: 2rem var(--spacing-edge);
+	min-height: 10rem;
+	margin-top: var(--height-header); /* Höjden på header så att hero inte hamnar bakom */
+
+	/* Centrerar innehåll*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* ------------------ "Öppettider" ------------------ */
+
+/* Hela sektionen */
+#opening-hours {
+	padding: 0.5rem var(--spacing-edge) 1.5rem;
+}
+
+/* ------------------ "Hitta hit" ------------------ */
+
+/* Hela sektionen */
+#find-us {
+	padding: 0.5rem var(--spacing-edge) 2em;
+	background-color: var(--color-bg-secondary);
+}
+
+/* Inbäddad karta */
+iframe {
+	width: 100%;
+	max-width: 25rem;
+	height: 15rem;
+	border: none;
+	box-shadow: 0 0 1px var(--color-primary); /* Knappt synlig, men ger kontrast mot bakgrunden */
+}
+
+/* ------------------ "Frågor & svar" ------------------ */
+
+/* Hela sektionen */
+#faq {
+	padding: 0.5rem var(--spacing-edge) 2rem;
+}
+
+#faq ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+/* Varje fråga + svar */
+#faq li {
+	margin-bottom: 0.7rem;
+	box-shadow: 0 0 2px var(--color-primary); /* Mjuk kant */
+	background-color: white;
+	border-radius: 3px;
+	text-align: left;
+}
+
+/* Knapp med fråga och pil-ikon */
+.question-button {
+	width: 100%;
+	padding: 0.8rem 1rem;
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+
+	font-family: var(--font-primary);
+	font-size: 1rem;
+	font-weight: bold;
+	text-align: left;
+
+	background-color: white;
+	color: var(--color-primary);
+	border: none;
+	cursor: pointer;
+
+	/* Gör att knappens kant inte hamnar utanför kanten på <li> */
+	border-radius: 5px;
+}
+
+/* div runt ikon */
 .arrow-icon-container {
+	height: fit-content;
 	transition: transform 0.3s;
 }
 
 .arrow-icon-container.active {
-	transform: rotate(-180deg);
+	transform: rotate(-180deg); /* Snurra när svaret visas */
 }
 
+/* Svaret på frågan */
 .answer-container {
-	display: none;
+	padding: 0 1rem 1rem;
+	display: none; /* Dölj som standard */
 }
 
 .answer-container.open {
-	display: block;
+	display: block; /* Visa svar på frågan */
+}
+
+.answer-container p {
+	margin: 0;
+}
+
+/* =========================== MEDIA QUERIES ===========================*/
+
+/* Stora skärmar > 900 px */
+@media (min-width: 900px) {
+	.hero {
+		height: 14rem; /* Lite större */
+	}
 }

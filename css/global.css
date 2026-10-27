@@ -8,7 +8,7 @@
 :root {
 	/* Färger */
 	--color-primary: #292361;
-	--color-primary-lighter: #4035a8;
+	--color-primary-lighter: #433a92;
 	--color-accent: #a41623;
 	--color-bg-primary: #f9f7ff;
 	--color-bg-secondary: #dae9ff;
@@ -34,7 +34,7 @@ html {
 	scroll-behavior: smooth;
 
 	/* Gör att man hamnar strax ovanför sektionen man scrollar till och att headern inte är i vägen */
-	scroll-padding-top: calc(var(--height-header) + 6rem);
+	scroll-padding-top: calc(var(--height-header));
 }
 
 * {
@@ -310,12 +310,12 @@ header .logo {
 	transform: rotate(-180deg);
 }
 
-/* =========================== FOOTER ===========================*/
+/* =========================== MAIN ===========================*/
 
 /* Sidnavigation (gäller "parken" och "inför besöket" */
 
 main nav {
-	padding: 1.5rem var(--spacing-edge) 1rem;
+	padding: 1.5rem var(--spacing-edge) 0;
 }
 
 /* =========================== FOOTER ===========================*/
