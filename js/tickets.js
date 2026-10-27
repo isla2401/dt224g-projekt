@@ -44,7 +44,7 @@ async function getTickets() {
 	} catch (error) {
 		// Skriv ut felmeddelande till konsolen och på sidan
 		console.error("Något gick fel: " + error);
-		attractionsSection.innerHTML = "<p>Kunde inte hämta biljetter. Försök igen senare.</p>";
+		ticketsContainer.innerHTML = "<p>Kunde inte hämta biljetter. Försök igen senare.</p>";
 	}
 }
 
