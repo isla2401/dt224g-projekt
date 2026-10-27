@@ -17,15 +17,6 @@
 	align-items: center;
 }
 
-/* ------------------ Sidnavigation ------------------ */
-
-main nav {
-	padding: 1.5rem var(--spacing-edge) 1rem;
-	display: flex;
-	justify-content: center;
-	gap: 0.5rem;
-}
-
 /* ------------------ "Attraktioner" + "Mat & Dryck" ------------------ */
 
 /* Sektioner med attraktioner och restauranger */

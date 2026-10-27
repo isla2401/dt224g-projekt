@@ -186,6 +186,7 @@ h3 {
 	background-color: var(--color-primary-lighter);
 	padding: 0.8rem 1.1rem;
 	border-radius: 4px;
+	margin: 0.2rem;
 }
 .subpage-nav-button:hover {
 	background-color: var(--color-primary);
@@ -307,6 +308,14 @@ header .logo {
 #menu .show-sub-menu.active {
 	/* Rotera ikonen när undermenyn öppnas */
 	transform: rotate(-180deg);
+}
+
+/* =========================== FOOTER ===========================*/
+
+/* Sidnavigation (gäller "parken" och "inför besöket" */
+
+main nav {
+	padding: 1.5rem var(--spacing-edge) 1rem;
 }
 
 /* =========================== FOOTER ===========================*/
