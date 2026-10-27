@@ -50,6 +50,11 @@ body {
 	/* Tar bort standard spacing*/
 	padding: 0;
 	margin: 0;
+
+	/* Gör tillsammans med main{flex: 1} att footer alltid hamnar längst ner på sidan */
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 img {
@@ -312,8 +317,11 @@ header .logo {
 
 /* =========================== MAIN ===========================*/
 
-/* Sidnavigation (gäller "parken" och "inför besöket" */
+main {
+	flex: 1; /* Gör att footer alltid hamnar längst ner på sidan */
+}
 
+/* Sidnavigation (gäller "parken" och "inför besöket" */
 main nav {
 	padding: 1.5rem var(--spacing-edge) 0;
 }
