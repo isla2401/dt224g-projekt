@@ -1,5 +1,10 @@
 /* Parksidan */
 
+html {
+	/* Gör att man hamnar ovanför rubriken på sektionen man scrollar till och att headern inte är i vägen */
+	scroll-padding-top: calc(var(--height-header) + 5.8rem);
+}
+
 /* ------------------ Hero ------------------ */
 .hero {
 	background-image: url("../images/hero-subpage.webp");

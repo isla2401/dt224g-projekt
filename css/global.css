@@ -33,7 +33,7 @@ html {
 	/* Gör att sidan rullas ner istället för att hoppa */
 	scroll-behavior: smooth;
 
-	/* Gör att man hamnar strax ovanför sektionen man scrollar till och att headern inte är i vägen */
+	/* Gör att man hamnar strax ovanför sektionen man scrollar till så att headern inte är i vägen */
 	scroll-padding-top: calc(var(--height-header));
 }
 
