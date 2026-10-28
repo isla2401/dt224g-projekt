@@ -2,7 +2,7 @@
 
 /* ------------------ Hero ------------------ */
 .hero {
-	background-image: url("../images/hero.webp");
+	background-image: url("../images/hero-home.webp");
 	background-color: #7ca9fd; /* Visas om inte bilden fungerar */
 	background-size: cover;
 	background-position: center;
@@ -18,7 +18,6 @@
 
 	gap: 1rem; /* Mellanrum mellan h1 och knapp */
 }
-
 /* ------------------ "Upptäck Laxåland" ------------------ */
 
 /* Hela sektionen */
@@ -102,6 +101,10 @@
 @media (min-width: 900px) {
 	.hero {
 		height: 30rem; /* Lite större */
+	}
+
+	.hero h1 {
+		font-size: 3.5rem;
 	}
 
 	/* Container för puffar */
