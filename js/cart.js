@@ -23,6 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	displayShoppingCart(); // Visa innehåll i varukorg
 });
 
+// När "Till betalning" klickas på
+payButton.addEventListener("click", () => {
+	alert("Denna funktion är ännu inte tillgänglig :(");
+})
+
 // =========================== FUNKTIONER ===========================
 
 // Hämtar eventuell varukorgsinnehåll från localStorage
