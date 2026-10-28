@@ -120,9 +120,9 @@ function animateButton(button) {
 	button.classList.add("active");
 	button.textContent = "✓";
 
-	// Återställ knappen efter 1 sekund
+	// Återställ knappen efter 700 ms
 	setTimeout(function () {
 		button.classList.remove("active");
 		button.textContent = "Köp nu";
-	}, 1000);
+	}, 700);
 }
