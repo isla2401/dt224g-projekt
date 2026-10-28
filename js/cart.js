@@ -46,8 +46,9 @@ function displayShoppingCart() {
 	shoppingCartItems.forEach((item, index) => {
 		// Skapa element
 		const listItemEl = document.createElement("li");
+		const textContainerEl = document.createElement("div"); // För styling
 		const imageEl = document.createElement("img");
-		const titleEl = document.createElement("h3");
+		const titleEl = document.createElement("h2");
 		const priceEl = document.createElement("p");
 		const removeButton = document.createElement("button");
 
@@ -68,11 +69,18 @@ function displayShoppingCart() {
 			displayShoppingCart(); // Ladda om varukorgen
 		});
 
-		// Lägg in bild, texter och knapp i <li>
+		// Lägg till klasser för styling
+		textContainerEl.classList.add("text-container");
+		removeButton.classList.add("button-red");
+
+		// Lägg in texter och knapp i container
+		textContainerEl.appendChild(titleEl);
+		textContainerEl.appendChild(priceEl);
+		textContainerEl.appendChild(removeButton);
+
+		// Lägg in bild och text-container i <li>
 		listItemEl.appendChild(imageEl);
-		listItemEl.appendChild(titleEl);
-		listItemEl.appendChild(priceEl);
-		listItemEl.appendChild(removeButton);
+		listItemEl.appendChild(textContainerEl);
 
 		// Lägg in <li> i <ul> (cartContainer) så att den visas på sidan
 		cartContainer.appendChild(listItemEl);
@@ -81,9 +89,9 @@ function displayShoppingCart() {
 		sum += item.price;
 	});
 
-    // Kontrollera om varukorgen har något innehåll att visa
+	// Kontrollera om varukorgen har något innehåll att visa
 	if (shoppingCartItems.length === 0) {
-		cartContainer.innerHTML = "Din varukorg är tom";
+		cartContainer.innerHTML = "Din varukorg är tom.";
 		cartSumEl.textContent = ""; // Ta bort summa-texten
 		payButton.classList.add("hide"); // Göm "Till betalning"-knapp
 	} else {
@@ -94,8 +102,8 @@ function displayShoppingCart() {
 
 // Tar bort föremål från varukorg
 function removeFromCart(itemIndex) {
-    // Ta bort från array
+	// Ta bort från array
 	shoppingCartItems.splice(itemIndex, 1);
-    // Uppdatera localStorage med den nya arrayen
+	// Uppdatera localStorage med den nya arrayen
 	localStorage.setItem("shoppingCart", JSON.stringify(shoppingCartItems));
 }

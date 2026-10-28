@@ -1,0 +1,79 @@
+/* Varukorgen*/
+
+main {
+	padding: var(--height-header) var(--spacing-edge) 2rem;
+}
+
+/* Hela sektionen */
+main section {
+	margin: 0 auto;
+	max-width: 30rem;
+	text-align: left;
+}
+
+h1 {
+	font-family: var(--font-accent);
+	font-size: 2rem;
+}
+
+/* ----------- Varukorgsinnehåll ----------- */
+
+/* <ul> med föremål i varukorgen */
+#cart-container {
+	list-style-type: none;
+	padding: 0;
+    margin-bottom: 2rem
+}
+
+/* Varje föremål i varukorgen */
+#cart-container li {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	border-bottom: 1px solid #2923616e; /* Linje mellan föremål */
+}
+
+/* Första föremålet i varukorgen */
+#cart-container > :first-child {
+	border-top: 1px solid #2923616e; /* Linje längst upp */
+}
+
+/* Biljett-bild */
+#cart-container img {
+	width: 40%;
+	max-width: 10rem;
+}
+
+/* Container för text och knapp */
+#cart-container .text-container {
+	padding: 1rem 1.5rem;
+}
+
+/* Namn på produkt */
+#cart-container h2 {
+	font-size: 1.3rem;
+	margin: 0;
+}
+
+/* Pris */
+#cart-container p {
+	margin-top: 0.2rem;
+}
+
+/* "Ta bort"-knapp */
+#cart-container button {
+	padding: 0.4rem 0.6rem;
+	font-size: 0.75rem;
+}
+
+/* ----------- Summa och betalning ----------- */
+
+/* Summan av varukorgen */
+#cart-sum {
+	font-weight: bold;
+}
+
+/* "Till betalning" med klassen "hide" */
+#to-payment-button.hide {
+	display: none; /* Göm knapp när varukorgen är tom */
+}
